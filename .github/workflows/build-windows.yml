@@ -35,6 +35,10 @@ jobs:
 
       - name: Build Tauri App
         shell: pwsh
+        env:
+          CARGO_PROFILE_RELEASE_LTO: "off"
+          CARGO_PROFILE_RELEASE_CODEGEN_UNITS: "16"
+          CARGO_BUILD_JOBS: "2"
         run: |
           pnpm tauri build --config '{\"bundle\": {\"createUpdaterArtifacts\": false}}'
 
