@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - fix/codex-oauth-multi-account
+      - local/build
 
 jobs:
   build-windows:
